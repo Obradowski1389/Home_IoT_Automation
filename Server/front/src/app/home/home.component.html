@@ -1,0 +1,146 @@
+
+<div class="wrapper">
+    <img src="../../assets/res.jpg">
+    <div class="legend">
+        <ul>
+            <h4>Legend</h4>
+            <li><span class="dot pi1"></span><span class="legend-text">PI1</span></li>
+            <li><span class="dot pi2"></span><span class="legend-text">PI2</span></li>
+            <li><span class="dot pi3"></span><span class="legend-text">PI3</span></li>
+        </ul>
+    </div>
+    <div class="people-count">
+        <h3>Current Outdoor Temp</h3>
+        <div class="values">
+            <h2>{{currTemp}}°C</h2>
+        </div>
+        <h3>Current Inside Temp</h3>
+        <div class="values">
+            <h2>{{currTempInside}}°C</h2>
+        </div>
+        <h3>People inside</h3>
+        <div class="values">
+            <h2>{{peopleCount}}</h2>
+        </div>
+        <h3>Window State</h3>
+        <div class="values">
+            <h2>{{windowState}}</h2>
+        </div>
+        <h3>System State</h3>
+<div class="values">
+    <h2 (click)="onSystemStateClick()">{{ systemState }}</h2>
+</div>
+        <h3>Fan Speed</h3>
+        <div class="values">
+            <h2>{{fanSpeedActual}}</h2>
+        </div>
+    </div>
+
+    <div class="history">
+        <button mat-raised-button color="warn" (click)="openFrame(12)">Alarm chart</button>
+    </div>
+
+    <div class="mode-controller">
+  
+        <!-- Fan Speed or Temperature Input -->
+        <div class="mode-settings">
+          <div *ngIf="selectedMode === 1" class="fan-speed">
+            <label>Fan Speed: {{ fanSpeed }}</label>
+            <input
+              type="range"
+              min="1"
+              max="3"
+              step="1"
+              (change)="onFanSpeedChange()"
+              [(ngModel)]="fanSpeed"
+            >
+          </div>
+      
+          <div *ngIf="selectedMode !== 1" class="temperature-input">
+            <label>Temperature (°C):</label>
+            <input
+              type="number"
+              [(ngModel)]="temperature"
+              (change)="onTemperatureChange()"
+              min="16"
+              max="30"
+            >
+          </div>
+        </div>
+        
+        <div *ngIf="selectedMode === 2" class="continual-settings">
+          <div class="input-group">
+            <label>Kp:</label>
+            <input type="number" [(ngModel)]="continualParam1">
+          </div>
+        
+          <div class="input-group">
+            <label>Ki:</label>
+            <input type="number" [(ngModel)]="continualParam2">
+          </div>
+        
+          <div class="input-group">
+            <label>Kd:</label>
+            <input type="number" [(ngModel)]="continualParam3">
+          </div>
+
+          <div class="input-group">
+            <label>Procenat:</label>
+            <input type="number" [(ngModel)]="continualParam4" readonly>
+          </div>
+        
+          <button mat-raised-button color="primary" (click)="sendContinualMode()">Send Continual Mode Data</button>
+        </div>
+        <!-- Original Mode Selector Slider -->
+        <div class="mode-slider">
+          <input
+            type="range"
+            min="0"
+            max="2"
+            step="1"
+            [(ngModel)]="selectedMode"
+            (input)="onModeChange()"
+          >
+          <div class="mode-labels">
+            <span>Auto</span>
+            <span>Manual</span>
+            <span>Continual</span>
+          </div>
+          <div class="selected-mode">
+            Mode: {{ modeText }}
+          </div>
+        </div>
+      
+      </div>
+      
+    <!-- PI1 -->
+    <div class="dot pi1" id="dl" matTooltip="Door Light" (click)="openFrame(11)"></div>
+    <div class="dot pi1" id="dpir1" matTooltip="Door Motion Sensor 1" (click)="openFrame(13)"></div>
+    <div class="dot pi1" id="dus1" matTooltip="Door Ultrasonic Sensor 1" (click)="openFrame(4)"></div>
+    <div class="dot pi1" id="ds1" matTooltip="Door Sensor 1" (click)="openFrame(5)"></div>
+    <div class="dot pi1" id="db" matTooltip="Door Buzzer" (click)="openFrame(10)"></div>
+    <div class="dot pi1" id="dms" matTooltip="Door Membrane Switch" (click)="openFrame(8)"></div>
+    <div class="dot pi1" id="rpir1" matTooltip="Room PIR 1" (click)="openFrame(5)"></div>
+    <div class="dot pi1" id="rpir2" matTooltip="Room PIR 2" (click)="openFrame(6)"></div>
+    <div class="dot pi1" id="rdht1" matTooltip="Room DHT 1" (click)="openFrame(1)"></div>
+    <div class="dot pi1" id="rdht2" matTooltip="Room DHT 2" (click)="openFrame(2)"></div>
+
+    <!-- PI2 -->
+    <div class="dot pi2" id="ds2" matTooltip="Door Sensor 2" (click)="openFrame(11)"></div>
+    <div class="dot pi2" id="dus2" matTooltip="Door Ultrasonic Sensor 2" (click)="openFrame(10)"></div>
+    <div class="dot pi2" id="dpir2" matTooltip="Door Motion Sensor 2" (click)="openFrame(14)"></div>
+    <div class="dot pi2" id="gdht" matTooltip="Garage DHT" (click)="openFrame(15)"></div>
+    <div class="dot pi2" id="glcd" matTooltip="Garage LCD"></div>
+    <div class="dot pi2" id="gsg" matTooltip="Gun Safe Gyro" (click)="openFrame(22)"></div>
+    <div class="dot pi2" id="rdht3" matTooltip="Room DHT 3" (click)="openFrame(3)"></div>
+    <div class="dot pi2" id="rpir3" matTooltip="Room PIR 3" (click)="openFrame(7)"></div>
+
+    <!-- PI3 -->
+    <div class="dot pi3" id="brgb" matTooltip="Bedroom RGB" (click)="openRGBDialog()"></div>
+    <div class="dot pi3" id="bir" matTooltip="Bedroom Infrared"></div>
+    <div class="dot pi3" id="b4sd" matTooltip="Clock" (click)="openClockDialog()"></div>
+    <div class="dot pi3" id="bb" matTooltip="Bedroom Buzzer" (click)="openFrame(9)"></div>
+    <div class="dot pi3" id="rdht4" matTooltip="Room DHT 4" (click)="openFrame(4)"></div>
+    <div class="dot pi3" id="rpir4" matTooltip="Room PIR 4" (click)="openFrame(8)"></div>
+
+</div>

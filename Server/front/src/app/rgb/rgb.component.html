@@ -1,0 +1,12 @@
+<mat-dialog-content>
+    <div class="color-remote">
+        <div class="color-row" *ngFor="let row of getChunkedColors()">
+            <div *ngFor="let color of row" class="color-button" [class.selected]="isColorSelected(color.color)" [style.background]="color.color" (click)="selectColor(color)">
+                <mat-icon *ngIf="isColorSelected(color.color)">done</mat-icon>
+            </div>
+          <div *ngIf="row.length == 1" class="color-button" id="turn-off" (click)="turnOff()">OFF</div>
+        </div>
+    </div>
+      
+</mat-dialog-content>
+

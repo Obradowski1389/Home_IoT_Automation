@@ -1,0 +1,330 @@
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.legend{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.legend ul{
+    list-style: none;
+    border: 1px solid rgba(135, 132, 132, 0.51);
+    border-radius: 5px;
+    padding: 20px 40px !important;
+    box-shadow: 0px 0px 10px 0px rgba(189, 188, 188, 0.47);
+
+}
+
+.legend ul li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.legend ul li span:hover{
+    cursor: default;
+}
+
+.legend-text{
+    margin-left: 20px;
+}
+.people-count {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(135, 132, 132, 0.51);
+    box-shadow: 0px 0px 10px 0px rgba(189, 188, 188, 0.47);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.history{
+    position:  absolute;
+    bottom: 25px;
+    right: 20px;
+}
+
+.wrapper img{
+    height: 100vh;
+}
+
+.dot{
+    width: 15px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    z-index: 1;
+}
+
+.pi1{
+    background-color: pink;
+}
+
+.pi1:hover{
+    background-color: palevioletred;
+    cursor: pointer;
+}
+
+.pi2{
+    background-color: palegreen;
+}
+
+.pi2:hover{
+    background-color: limegreen;
+    cursor: pointer;
+}
+
+.pi3{
+    background-color: skyblue;
+}
+
+.pi3:hover{
+    background-color: deepskyblue;
+    cursor: pointer;
+
+}
+/* PI1 */
+#dl{
+    bottom: 155px;
+    left: 705px;
+    /* bottom: 120px;   +35
+    left: 560px; +145*/
+}
+
+#dpir1{
+    bottom: 180px;
+    left: 705px;
+}
+
+#dus1{
+    bottom: 205px;
+    left: 705px;
+}
+
+#ds1{
+    bottom: 240px;
+    left: 705px;
+}
+
+#db{
+    bottom: 270px;
+    left: 765px;
+}
+
+#dms{
+    bottom: 390px;
+    left: 705px;
+}
+
+#rpir1{
+    bottom: 270px;
+    left: 655px;
+}
+
+#rpir2{
+    top: 330px;
+    left: 595px;
+}
+
+#rdht1{
+    bottom: 180px;
+    left: 605px;
+}
+
+#rdht2{
+    bottom: 330px;
+    left: 605px;
+}
+
+/* PI2 */
+#ds2{
+    bottom: 320px;
+    left: 900px; 
+    /* 720 */
+}
+
+#dus2{
+    bottom: 320px;
+    left: 930px;
+}
+
+#glcd{
+    bottom: 290px;
+    left: 900px;
+}
+
+#gdht{
+    bottom: 290px;
+    left: 930px;
+}
+
+#gsg{
+    bottom: 485px;
+    right: 835px;
+}
+
+#dpir2{
+    bottom: 450px;
+    right: 900px;
+}
+
+#rpir3{
+    top: 295px;
+    left: 640px;
+}
+
+#rdht3{
+    top: 295px;
+    left: 665px;
+}
+
+/* PI3 */
+#rpir4{
+    top: 45px;
+    right: 890px;
+}
+
+#rdht4{
+    top: 45px;
+    right: 800px;
+}
+
+#bb{
+    top: 45px;
+    right: 690px;
+}
+
+#b4sd{
+    top: 45px;
+    right: 600px;
+}
+
+#bir{
+    right: 835px;
+    top: 135px;
+}
+
+#brgb{
+    right: 730px;
+    top: 135px;
+}
+
+.mode-slider input[type="range"] {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.mode-labels {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.mode-labels span {
+    flex: 1;
+    text-align: center;
+}
+
+.selected-mode {
+    font-weight: bold;
+}
+
+.mode-settings {
+    margin-bottom: 20px;
+  }
+  
+  .fan-speed, .temperature-input {
+    margin-bottom: 10px;
+  }
+  
+  .mode-slider {
+    margin-top: 10px;
+  }
+  
+  input[type="range"] {
+    width: 100%;
+  }
+  
+  input[type="number"] {
+    width: 80px;
+  }
+
+  /* ONLY mode-controller is positioned absolutely */
+.mode-controller {
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* NO position:absolute here anymore */
+.mode-slider, .mode-settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(135, 132, 132, 0.51);
+    box-shadow: 0px 0px 10px 0px rgba(189, 188, 188, 0.47);
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    width: 250px;
+}
+
+/* Inside mode-slider */
+.mode-slider input[type="range"] {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+/* Inside mode-settings */
+.mode-settings label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.mode-settings input[type="range"],
+.mode-settings input[type="number"] {
+    width: 100%;
+}
+
+.continual-settings {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .input-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input {
+    padding: 5px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  

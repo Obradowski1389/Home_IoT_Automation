@@ -1,0 +1,211 @@
+{
+    "RDHT1": {
+      "name": "RDHT1",
+      "simulated": true,
+      "pin": 27,
+      "runsOn": "Pi1",
+      "hostname": "192.168.1.100",
+      "port": 1883
+    },
+    "RDHT2": {
+      "name": "RDHT2",
+      "simulated": true,
+      "pin": 17,
+      "runsOn": "Pi1",
+      "hostname": "192.168.1.100",
+      "port": 1883
+    },
+    "RPIR1": {
+      "name": "RPIR1",
+      "simulated": true,
+      "pin": 22,
+      "runsOn": "Pi1",
+      "hostname": "192.168.1.100",
+      "port": 1883
+    },
+    "RPIR2": {
+      "name": "RPIR2",
+      "simulated": true,
+      "pin": 23,
+      "runsOn": "Pi1",
+      "hostname": "192.168.1.100",
+      "port": 1883
+    },
+    "DPIR1": {
+      "name": "DPIR1",
+      "simulated": true,
+      "pin": 24,
+      "runsOn": "Pi1",
+      "hostname": "192.168.1.100",
+      "port": 1883
+    },
+    "DUS1": {
+      "name": "DUS1",
+      "simulated": true,
+      "echo_pin": 25,
+      "trigger_pin": 26,
+      "runsOn": "Pi1",
+      "hostname": "192.168.1.100",
+      "port": 1883
+    },
+    "DS1": {
+      "name": "DS1",
+      "simulated": true,
+      "pin":5,
+      "runsOn": "Pi1",
+      "hostname": "192.168.1.100",
+      "port": 1883
+    },
+    "DL": {
+      "name": "DL",
+      "simulated": true,
+      "pin":6,
+      "runsOn": "Pi1",
+      "hostname": "192.168.1.100",
+      "port": 1883
+    },
+    "DB": {
+      "name": "DB",
+      "simulated": true,
+      "pin":16,
+      "runsOn": "Pi1",
+      "hostname": "192.168.1.100",
+      "port": 1883
+    },
+    "DMS": {
+      "name": "DMS",
+      "simulated": true,
+      "pincode": "1234",
+      "pins":[20, 21, 8, 7, 1, 12, 13, 19],
+      "runsOn": "Pi1",
+      "hostname": "192.168.1.100",
+      "port": 1883
+    },
+
+    
+
+    "RDHT3": {
+      "name": "RDHT3",
+      "simulated": true,
+      "pin": 17,
+      "runsOn": "Pi2",
+      "hostname": "192.168.1.100",
+      "port": 1883
+    },
+    "RPIR3": {
+      "name": "RPIR3",
+      "simulated": true,
+      "pin": 27,
+      "runsOn": "Pi2",
+      "hostname": "192.168.1.100",
+      "port": 1883
+    },
+    "GDHT": {
+      "name": "GDHT",
+      "simulated": true,
+      "pin": 14,
+      "runsOn": "Pi2",
+      "hostname": "192.168.1.100",
+      "port": 1883
+    },
+    "DPIR2": {
+      "name": "DPIR2",
+      "simulated": true,
+      "pin": 23,
+      "runsOn": "Pi2",
+      "hostname": "192.168.1.100",
+      "port": 1883
+    },   
+    "DUS2": {
+      "name": "DUS2",
+      "simulated": true,
+      "echo_pin": 26,
+      "trigger_pin": 16,
+      "runsOn": "Pi2",
+      "hostname": "192.168.1.100",
+      "port": 1883
+    },
+    "GLCD": {
+      "name": "GLCD",
+      "sda_pin": 2,
+      "scl_pin": 3,
+      "simulated": false,
+      "runsOn": "Pi2",
+      "hostname": "192.168.1.100",
+      "port": 1883,
+      "address": "0x27"
+    },
+    "DS2": {
+      "name": "DS2",
+      "simulated": true,
+      "pin":5,
+      "runsOn": "Pi2",
+      "hostname": "192.168.1.100",
+      "port": 1883
+    },
+    "GSG": {
+      "name": "GSG",
+      "simulated": false,
+      "sda_pin": 2,
+      "scl_pin": 3,
+      "pin":6,
+      "runsOn": "Pi2",
+      "hostname": "192.168.1.100",
+      "port": 1883,
+      "address": "0x68"
+    },
+  
+  
+  
+    "RPIR4": {
+      "name": "RPIR4",
+      "simulated": true,
+      "pin": 27,
+      "runsOn": "Pi3",
+      "hostname": "192.168.1.100",
+      "port": 1883
+    },
+    "RDHT4": {
+      "name": "RDHT4",
+      "simulated": true,
+      "pin": 22,
+      "runsOn": "Pi3",
+      "hostname": "192.168.1.100",
+      "port": 1883
+    },
+    "BB": {
+      "name": "BB",
+      "simulated": true,
+      "pin":16,
+      "runsOn": "Pi3",
+      "hostname": "192.168.1.100",
+      "port": 1883
+    },
+    "B4SD": {
+      "name": "B4SD",
+      "simulated": false,
+      "segments": [11, 16, 23, 8, 7, 10, 18, 25],
+      "digits": [22, 27, 17, 24],
+      "runsOn": "Pi3",
+      "hostname": "192.168.1.100",
+      "port": 1883
+    },
+    "BRGB": {
+      "name": "BRGB",
+      "simulated": true,
+      "R_pin": 20,
+      "G_pin": 13,
+      "B_pin": 19,
+      "runsOn": "Pi3",
+      "hostname": "192.168.1.100",
+      "port": 1883
+    },
+    "BIR": {
+      "name": "BIR",
+      "simulated": true,
+      "pin": 26,
+      "runsOn": "Pi3",
+      "hostname": "192.168.1.100",
+      "port": 1883
+    }
+  }
