@@ -1,0 +1,27 @@
+mat-dialog-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+}
+
+.wrapper h1{
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.wrapper img{
+    width: 20%;
+}
+
+#stop-btn{
+    width: 90%;
+}

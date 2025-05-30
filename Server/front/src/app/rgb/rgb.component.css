@@ -1,0 +1,48 @@
+.color-remote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.color-row {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0px;
+    /* Adjust margin, padding, or other styles as needed */
+}
+  
+.color-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid rgba(144, 144, 144, 0.552);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+}
+
+.color-button:hover {
+    box-shadow: 0 0 8px 3px rgba(102, 102, 102, 0.3); /* Add shadow on hover */
+}
+
+.selected {
+    border: 2px solid #424242;/* Adjust the box shadow as needed */
+}
+
+#turn-off{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+mat-icon{
+    float: right;
+    padding: 5px;
+    color: #424242;
+}
+
+  
